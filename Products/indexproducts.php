@@ -2,7 +2,9 @@
 <?php include("../Components/header.php")?>
 <div class="container">
     <div class="col-md-8">
-        <table class="table table-bordered">
+        <h1>Listado de productos</h1>
+        <hr>
+        <table class="table table-bordered table-striped">
             <tr>
                 <th>Nombre producto</th>
                 <th>Precio unitario</th>
