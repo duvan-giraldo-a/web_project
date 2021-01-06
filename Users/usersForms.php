@@ -15,7 +15,7 @@
 <div class="container col-12 col-md-10 col-lg-10 col-xl-10">
     <div class="card">
         <div class="card-header">
-            <h1><?php echo(!$editing ? 'Nuevo Usuario' : 'Editar Usuario ' );?></h1>
+            <h1><?php echo(!$editing ? 'Nuevo Usuario' : 'Editar Usuario');?></h1>
         </div>
         <div class="card-body">
             <form action="<?php echo($editing ? 'editUser.php' : 'createUser.php' );?>" method="POST">
