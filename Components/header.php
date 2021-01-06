@@ -20,13 +20,13 @@
             MENU
         </li>
         <li>
-            <a href="">Inicio</a>
+            <a href="/web_project/index.php">Inicio</a>
         </li>
         <li>
-            <a href="">Usuarios</a>
+            <a href="/web_project/Users/users.php">Usuarios</a>
         </li>
         <li>
-            <a href="">Productos</a>
+            <a href="/web_project/Products/indexproducts.php">Productos</a>
         </li>
     </ul>
 </div>

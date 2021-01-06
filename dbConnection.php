@@ -1,8 +1,8 @@
 <?php
-$conn = mysqli_connect(
-    'localhost',
-    'root',
-    '',
-    'circuits_DB'
-);
+    $conn = mysqli_connect(
+        'localhost',
+        'root',
+        '',
+        'circuits_DB'
+    );
 ?>
