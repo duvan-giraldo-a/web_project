@@ -3,8 +3,4 @@
 
 
 
-
-
-
-
 <?php include("Components/footer.php")?>
