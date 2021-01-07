@@ -30,7 +30,7 @@
                             <td><?php echo $user['role']?></td>
                             <td>
                                 <button class="btn btn-success" onclick="window.location='<?php echo ('/web_project/Users/usersForms.php?id='.$user['id'])?>'"><i class="fas fa-user-edit"></i></button>
-                                <button class="btn btn-danger"><i class="fas fa-user-minus"></i></button>
+                                <button class="btn btn-danger" onclick="window.location='<?php echo ('/web_project/Users/deleteUser.php?id='.$user['id'])?>'"><i class="fas fa-user-minus"></i></button>
                             </td>
                         </tr>
                     <?php } ?>
