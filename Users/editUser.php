@@ -13,6 +13,7 @@
             if ($password == "") {
                 $query = "UPDATE users SET idrole = '".$id_role."',name = '".$name."',identification =  '".$identification."',email = '".$email."' WHERE users.idusers = ".$id;
             } else {
+                $password = password_hash($password,PASSWORD_DEFAULT);
                 $query = "UPDATE users SET idrole = '".$id_role."',name = '".$name."',identification =  '".$identification."',email = '".$email."',password = '".$password."' WHERE users.idusers = ".$id;
             }
             mysqli_query($conn,$query);
