@@ -15,16 +15,16 @@ function deleteProduct(idProduct) {
 }
 
 function cardEffectOver(){  
-    var card = document.getElementById('cardId');
-    card.className="display-none";
+    var cardFooter = document.getElementsByClassName('display-none');
+    cardFooter.className="display-info";
+    console.log("Hols");
 }
 
 function cardEffectOut(){  
-    var card = document.getElementById('cardId');
-    card.className="display-info";  
+    var cardFooter = document.getElementsByClassName('display-info');
+    cardFooter.className="display-none";
+    console.log("Bye");     
 }
-
-
 
 function validationProductForm(){
     var productName = document.getElementById('name').value;

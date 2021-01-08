@@ -1,7 +1,8 @@
 <?php include("../dbConnection.php");
-    //$_SESSION['role']='admin';
+    $_SESSION['role']='admin';
 ?>
 <?php include("../Components/header.php")?>
+<?php include("../Components/aside-bar.php")?>
 
 <div class="card">
     <div class="card-header">

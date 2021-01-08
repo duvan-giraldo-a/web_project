@@ -2,36 +2,36 @@
     include("../Components/header.php");
     //$_SESSION['role']='admin';
 ?>
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="card" id="cardId" onmouseover="cardEffectOver()" onmouseout="cardEffectOut()">
-                <div class="card-header">
-                <h1>CI 555</h1>
-                </div>
-                <div class="body">
-                    <img src="../images/5ff758d533e0d6.05711177.jpg" width="200" height="200">                    
-                    <div id="product-info" class="display-none">
-                        <p>Precio unitario: 10</p> 
-                        <p>Stock: 10</p>    
+<?php include("../Components/aside-bar.php")?>
+
+<div class="container" id="cardId">
+        <h1>Productos de la compañía</h1>
+        <div class="row">
+            <?php
+            $query = "SELECT * FROM product";
+            $result_product = mysqli_query($conn, $query);
+            while($row = mysqli_fetch_array($result_product)){?>
+                
+                    <div  class="col-md-3">
+                        <div class="card"  onmouseover="cardEffectOver()" onmouseout="cardEffectOut()">
+                            <div class="card-header">
+                                <h1><?php echo $row['name']?></h1>
+                            </div>
+                            <div class="card-body">
+                                <img src="<?php echo "../images/".$row['image_name']?>" width="200" height="200">                    
+                            </div>
+                            <div class="card-footer">
+                                <p>Precio unitario: <?php echo $row['unit_price']?></p> 
+                                <p>Stock: <?php echo $row['stock']?></p>    
+                            </div>    
+                        </div>
                     </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="col-md-3">
+                
+            <?php } ?>
         
         </div>
-        <div class="col-md-3">
-        
-        </div>
-        <div class="col-md-3">
-        
-        </div>
-    </div>
-</div>
 
-
+        </div>
 <?php
     include("../Components/footer.php");
     //$_SESSION['role']='admin';

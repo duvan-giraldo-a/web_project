@@ -24,6 +24,7 @@
 ?>  
 
 <?php include("../Components/header.php")?>
+<?php include("../Components/aside-bar.php")?>
 <div class="container col-12 col-md-10 col-lg-10 col-xl-10">
     <div class="card">
         <div class="card-header">
