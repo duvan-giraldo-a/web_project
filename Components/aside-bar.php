@@ -26,14 +26,14 @@
           <div class="dropdown dropleft">
             <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <p class="dropdown-item">David Sanchez</p>
-              <p class="dropdown-item">Administrador</p>
+              <p class="dropdown-item"><?php echo(isset($_SESSION['name']) ? $_SESSION['name'] : '' );?></p>
+              <p class="dropdown-item"><?php echo(isset($_SESSION['role']) ? $_SESSION['role'] : '' );?></p>
             </div>
           </div>
 
         </li>
         <li class="nav-item">
-          <a class="nav-link"><i class="fas fa-power-off"></i></a>
+          <a class="nav-link" href="/web_project/auth/logout.php"><i class="fas fa-power-off"></i></a>
         </li>
       </ul>
   </nav>

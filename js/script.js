@@ -74,3 +74,37 @@ function validationForm(){
         return false;
     }
 }
+
+function loginValidation(){
+    email = document.getElementById('email').value;
+    password = document.getElementById('password').value;
+
+    emailError = document.getElementById('error-email');
+    passwordError = document.getElementById('error-password');
+
+    emailValidation = /^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/.test(email);
+
+    if(!emailValidation){
+        document.getElementById('email').className = 'form-control is-invalid';
+        if(email == ""){
+            emailError.innerHTML = "El campo es requerido";
+        }else{
+            emailError.innerHTML = "Ingrese un email válido";
+        }
+    }else{
+        document.getElementById('email').className = ' form-control';
+    }
+
+    if(password == ""){
+        document.getElementById('password').className = 'form-control is-invalid';
+        passwordError.innerHTML = "El campo es requerido";
+    }else{
+        document.getElementById('password').className = ' form-control';
+    }
+
+    if(emailValidation && password != ""){
+        return true;
+    }else{
+        return false;
+    }
+}
