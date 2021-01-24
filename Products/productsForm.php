@@ -1,5 +1,6 @@
+<?php include("../dbConnection.php")?>
+<?php include("../Components/auth-middleware.php")?>
 <?php 
-    include("../dbConnection.php");
     if(isset($_GET['id'])){
         $editing = true;
         if(isset($_GET['id'])){

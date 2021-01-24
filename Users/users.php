@@ -1,5 +1,5 @@
 <?php include("../dbConnection.php")?>
-<?php include("../Components/auth-middleware.php")?>
+<?php include("../Components/admin-middleware.php")?>
 <?php include("../Components/header.php")?>
 <?php include("../Components/aside-bar.php")?>
 
@@ -32,7 +32,7 @@
                             <td><?php echo $user['role']?></td>
                             <td>
                                 <button class="btn btn-success" onclick="window.location='<?php echo ('/web_project/Users/usersForms.php?id='.$user['id'])?>'"><i class="fas fa-user-edit"></i></button>
-                                <button class="btn btn-danger" onclick="window.location='<?php echo ('/web_project/Users/deleteUser.php?id='.$user['id'])?>'"><i class="fas fa-user-minus"></i></button>
+                                <button class="btn btn-danger" onclick = "deleteUser('<?php echo $user['id']?>')"><i class="fas fa-user-minus"></i></button>
                             </td>
                         </tr>
                     <?php } ?>

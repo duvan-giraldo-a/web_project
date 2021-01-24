@@ -1,6 +1,5 @@
-<?php include("../dbConnection.php");
-    $_SESSION['role']='admin';
-?>
+<?php include("../dbConnection.php")?>
+<?php include("../Components/auth-middleware.php")?>
 <?php include("../Components/header.php")?>
 <?php include("../Components/aside-bar.php")?>
 

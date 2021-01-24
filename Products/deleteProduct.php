@@ -1,11 +1,11 @@
 <?php include("../dbConnection.php")?>
+<?php include("../Components/auth-middleware.php")?>
 <?php
-    echo ($_GET['id']);
+    $queryFileName = "SELECT image_name FROM product WHERE idproduct=".$_GET['id'];
+    $result = mysqli_query($conn,$queryFileName);
+    $fileName = mysqli_fetch_array($result);
+    unlink("../images/".$fileName['image_name']);
     $query = "DELETE FROM product WHERE idproduct=".$_GET['id'];
     mysqli_query($conn,$query);
-    $queryFileName = "SELECT image_name FROM product WHERE idproduct=".$_GET['id'];
-    $fileName = mysqli_query($conn,$queryFileName);
-    //echo $fileName;
-    //unlink("../images/");
     header("Location: indexProducts.php");
 ?>

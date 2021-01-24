@@ -1,4 +1,5 @@
 <?php include("../dbConnection.php")?>
+<?php include("../Components/auth-middleware.php")?>
 <?php
     if(isset($_POST['submit'])){   
         $file = $_FILES['file'];

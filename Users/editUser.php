@@ -1,5 +1,5 @@
 <?php include("../dbConnection.php")?>
-<?php include("../Components/auth-middleware.php")?>
+<?php include("../Components/admin-middleware.php")?>
 
 <?php
 

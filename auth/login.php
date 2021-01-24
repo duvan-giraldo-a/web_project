@@ -49,7 +49,7 @@
                                 session_start();
                                 $_SESSION['name'] = $name;
                                 $_SESSION['role'] = $role;
-                                header("Location: ../index.php");
+                                header("Location: ../Products/homeProducts.php");
                             }else{
                                 echo "Las credenciales ingresadas son incorrectas";
                             }
